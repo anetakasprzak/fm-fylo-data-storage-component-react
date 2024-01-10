@@ -1,15 +1,19 @@
 import { useState } from "react";
+import IconDocument from "./assets/images/icon-document.svg";
+import IconFolder from "./assets/images/icon-folder.svg";
+import IconUpload from "./assets/images/icon-upload.svg";
+import Logo from "./assets/images/logo.svg";
 
 export default function App() {
   return (
     <div className="wrapper">
       <div className="component">
         <div className="images__box">
-          <img className="logo" src="../public/images/logo.svg" />
+          <img className="logo" src={Logo} />
           <div className="icons">
-            <img className="icon" src="../public/images/icon-document.svg" />
-            <img className="icon" src="../public/images/icon-folder.svg" />
-            <img className="icon" src="../public/images/icon-upload.svg" />
+            <img className="icon" src={IconDocument} />
+            <img className="icon" src={IconFolder} />
+            <img className="icon" src={IconUpload} />
           </div>
         </div>
         <Input />

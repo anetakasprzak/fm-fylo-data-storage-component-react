@@ -24,7 +24,7 @@ body {
 }
 
 .wrapper {
-  background-image: url(../public/images/bg-mobile.png);
+  background-image: url("./assets/images/bg-mobile.png");
   background-color: #0c122c;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,7 +166,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 144rem;
     height: 80rem;
     background-color: #0c122c;
-    background-image: url(../public/images/bg-desktop.png);
+    background-image: url("./assets/images/bg-desktop.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: bottom;
