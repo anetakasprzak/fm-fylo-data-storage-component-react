@@ -1,0 +1,230 @@
+:root {
+  font-family: "Raleway", sans-serif;
+  line-height: normal;
+  font-weight: 400;
+
+  color: #dbd9ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  background-image: url(../public/images/bg-mobile.png);
+  background-color: #0c122c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 37.5rem;
+  height: 66.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.images__box {
+  background-color: #1e2d69;
+  border-radius: 1rem 10rem 1rem 1rem;
+  box-shadow: 0rem 7.5rem 10rem -3rem rgba(0, 0, 0, 0.25);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 4.1rem;
+}
+
+.icons {
+  width: 17.7rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.3rem;
+}
+
+.icon {
+  background-color: #0c122c;
+  height: 4.8rem;
+  width: 4.8rem;
+  padding: 1.3rem;
+  border-radius: 1rem;
+}
+
+.input__box {
+  background-color: #1e2d69;
+  border-radius: 1rem;
+  box-shadow: 0rem 7.5rem 10rem -3rem rgba(0, 0, 0, 0.25);
+  padding: 3.2rem 3.2rem 5.6rem 3.2rem;
+  position: relative;
+}
+
+.input__text {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 26.2rem;
+  height: 2rem;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  opacity: 0.8;
+  background: linear-gradient(to left, #ff4a95, #ffa197);
+  height: 1rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  border-radius: 10px;
+  opacity: 0.8;
+  background: linear-gradient(to left, #ff4a95, #ffa197);
+  height: 1rem;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 1.5px; /* Centers thumb on the track */
+  background-color: #fff;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.display {
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0rem 7.5rem 10rem -3rem rgba(0, 0, 0, 0.25);
+  padding: 1.6rem 1.8rem 1.6rem 2.4rem;
+  width: 18rem;
+  display: flex;
+  gap: 0.9rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display__number {
+  color: #0c122c;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+.display__text {
+  color: #0c122c;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 90em) {
+  .wrapper {
+    width: 144rem;
+    height: 80rem;
+    background-color: #0c122c;
+    background-image: url(../public/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 3rem;
+  }
+
+  .images__box {
+    width: 35rem;
+  }
+
+  .input__box {
+    width: 54rem;
+    height: 15.4rem;
+    padding: 4rem 4.1rem 4rem 3.9rem;
+    position: relative;
+  }
+
+  .input__text {
+    text-align: start;
+    margin-bottom: 1.5rem;
+  }
+
+  input[type="range"] {
+    width: 46rem;
+  }
+
+  .display {
+    border-radius: 10px 10px 0px 10px;
+    padding: 1.6rem 1.8rem 1.6rem 2.4rem;
+
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .display::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+    top: 99%;
+    left: 87.5%;
+  }
+}
